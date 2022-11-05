@@ -3,6 +3,7 @@ package mst_auth_client;
 import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,14 +25,21 @@ public class MST_Auth_Client {
 		msta_library = MSTALibrary;			
 	}
 	public void doGet(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws IOException, MSTAException  {
-		// simulate a little work
+		//System.out.println("Auth doPost");
+		String input;
+		if (trustedbody == null)
+			input = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+		else input = trustedbody;
+	    //System.out.println(input);
+	    //System.out.println(trustedbody);
+	    // simulate a little work
 		try {
 		  TimeUnit.MILLISECONDS.sleep(500);	// add a little wait, to see if root will end
 		}
 		catch (JSONException | InterruptedException ie) {
 			throw(new MSTAException (": InterruptedException" + ie));		
 		}						  
-		response.getWriter().append("AuthorizationService: PONG ");
+		response.getWriter().append(input);
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response, String trustedbody) throws IOException, MSTAException  {
 	    response.getWriter().append("doPost").append(request.getContextPath());
