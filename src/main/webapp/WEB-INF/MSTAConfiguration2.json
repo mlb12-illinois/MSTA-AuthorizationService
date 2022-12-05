@@ -1,6 +1,6 @@
 {
-	"MSTA_DO_INIT": "S",
-	"MSTA_CONNECTION_URL": "ws://localhost:8080/MST-Auth/Register",
+	"MSTA_DO_INIT": "O",
+	"MSTA_CONNECTION_URL": "ws://ec2-54-205-101-105.compute-1.amazonaws.com/wss",
 	"MSTA_RESPONSE_TIMEOUT":"100000",
 	"MSTA_TIMEOUT_WAIT":"3000",
 	"MSTA_CONNECTION_TIMEOUT":"100000",
@@ -16,7 +16,7 @@
 	"keystorePassword": "1as6iYxMSdgeirMcJBgvBD1gqx86Mw5YVwso87EcgxE=",
 	"instanceId" : "d3035fd0-d764-4383-8e81-aeb6c9ffc20f",	
 	"authorizationList":[
-		{"microserviceName":"MSTABusiness","uri":"http://localhost:8080/MSTA-BusinessService/MSTABusiness.html","microserviceId":"f34e5ca4-9366-4da0-93cc-ff2e7bede13e",
+		{"microserviceName":"MSTABusiness","uri":"http://mstbusiness-env-1.us-east-2.elasticbeanstalk.com/MSTA-BusinessService/MSTABusiness.html","microserviceId":"f34e5ca4-9366-4da0-93cc-ff2e7bede13e",
 			"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiuTNhwvX2F1C3GugI1bFTTGQSx/yROTckkQIwuoaIHJsbx688di9akGjDRNvA8rL/S1Clkkil95LAlSDWTq/PvfTbpfJ7U6P745Xo3lYRGwpkjqR77FCi+17F9g5EdCTvNzMsoNcqDPF93lrQwKTUbMswLiSVlAUlr/IcWEt7PI2dl0HzOQu5meAniC0J5BOPImxEtInaePgDgOxGofk185k/NjPGqURfvc+IMfgllpcBZlj2novrFDHilcEjEb4aWeUsUL3vVAG6Hxacze2WpaQ2l3vtmvlSMJEwG4H0PWZ1uY4rpgx4RZbTSgqwiX/m+8+tFRvdot9G3dHZ6FQJwIDAQAB",
 			"instanceList" : [],
 			"authorizations":[{"RECEIVE":["GET","PUT","POST"]}]},
@@ -26,3 +26,4 @@
 			"instanceList" : [],
 			"authorizations":[{"SEND":["POST"]},{"RECEIVE":["POST"]}]}]
 }
+ 
